@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animacija</title>
+<style>
+
+body {
+    background-color: #050210;
+}
+
+#krugovi {
+    position:relative;
+    margin: 140px auto;
+    width: 600px;
+    height: 400px;
+    
+}
+
+#krug1 {
+    position: absolute;
+    left: 140px;
+    top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    filter:blur(20px);
+    animation-name: animation1;
+    animation-duration: .9s;
+    animation-timing-function: linear;
+    opacity: .4;
+
+}
+
+#krug2 {
+    position: absolute;
+    left: 170px;
+    top: 80px;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    animation-name: my-animation;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+}    
+
+#krug3{
+    position: absolute;
+    top: 80px;
+    left: 170px;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    transform: scale(.85);
+    background: #050210;
+   
+}
+
+#krug4 {
+    position: absolute;
+    left: 280px;
+    top: 190px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #2c2b33;
+    animation-name: my-animation2;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animation1 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes my-animation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes my-animation2 {
+    0% {transform: scale(0.3);}
+    100% {transform: scale(6.5);}
+}
+
+</style>
+
+
+</head>
+<body>
+    
+    <div id="krugovi">
+        <div id="krug1"></div>
+        <div id="krug2"></div>
+        <div id="krug3"></div>
+        <div id="krug4"></div>
+</div>
+
+</body>
+</html>
